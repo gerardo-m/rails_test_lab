@@ -1,0 +1,32 @@
+<%= form_with(model: dummy_model) do |form| %>
+  <% if dummy_model.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dummy_model.errors.count, "error") %> prohibited this dummy_model from being saved:</h2>
+
+      <ul>
+        <% dummy_model.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dummy_text1 %>
+    <%= form.text_field :dummy_text1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dummy_text2 %>
+    <%= form.text_field :dummy_text2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dummy_text3 %>
+    <%= form.text_field :dummy_text3 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

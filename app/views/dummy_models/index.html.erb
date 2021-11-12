@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dummy Models</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dummy text1</th>
+      <th>Dummy text2</th>
+      <th>Dummy text3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dummy_models.each do |dummy_model| %>
+      <tr>
+        <td><%= dummy_model.dummy_text1 %></td>
+        <td><%= dummy_model.dummy_text2 %></td>
+        <td><%= dummy_model.dummy_text3 %></td>
+        <td><%= link_to 'Show', dummy_model %></td>
+        <td><%= link_to 'Edit', edit_dummy_model_path(dummy_model) %></td>
+        <td><%= link_to 'Destroy', dummy_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dummy Model', new_dummy_model_path %>
