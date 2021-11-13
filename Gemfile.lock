@@ -47,6 +47,8 @@ GEM
     activerecord (6.1.4.1)
       activemodel (= 6.1.4.1)
       activesupport (= 6.1.4.1)
+    activerecord-import (1.2.0)
+      activerecord (>= 3.2)
     activestorage (6.1.4.1)
       actionpack (= 6.1.4.1)
       activejob (= 6.1.4.1)
@@ -102,6 +104,7 @@ GEM
     mini_portile2 (2.6.1)
     minitest (5.14.4)
     msgpack (1.4.2)
+    mysql2 (0.5.3)
     nio4r (2.5.8)
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
@@ -204,12 +207,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-import (~> 1.2)
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
   faker (~> 2.19)
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  mysql2 (~> 0.5.3)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)
