@@ -1,0 +1,13 @@
+<h1>AnimalPictures#index</h1>
+
+<% unless @image_url.nil? %>
+    <%= image_tag @image_url, size:"512x512" %>
+<% end%>
+
+<div id="actions">
+    <%= button_to "Foxes", action: :get_fox %>
+
+    <%= button_to "Cats", action: :get_cat %>
+    <%= button_to "Dogs", action: :get_dog %>
+    <%= button_to "Ducks", action: :get_duck %>
+</div>
